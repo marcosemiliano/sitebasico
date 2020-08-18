@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type=""text/css" href="style.css">
 <title> controle de estacionamento </title>
+        
 </head>
 <meta charset ="utf-8">
 <body bgcolor="white" text="black">
@@ -24,7 +25,18 @@
   </ul>
   </div>
   <div id="div_direita">
-  
+    
+	 <form name="formuser" action="#" method="POST">
+			marca: &nbsp &nbsp <input type="text" name="marca" ><br><br>
+			modelo:  &nbsp <input type="text" name="modelo" ><br><br>
+			placa: &nbsp &nbsp <input type="text" name="placa" ><br><br>
+			ano: &nbsp &nbsp &nbsp <input type="text" name="ano" ><br><br>
+			cor: &nbsp &nbsp &nbsp <input type="text" name="cor" ><br><br>
+			<label>observações</label><br>
+			<textarea name="observações" rows="10" cols="50"></textarea>
+			
+			<input type="submit" onclick="return validar()">
+    </form>
   
   </div>
   </div>
@@ -33,6 +45,6 @@
 Seja Bem Vindo,<br>
 
 </div>
-<footer>ESCOLHA A VAGA NA QUAL DESEJA ESTACIONAR</footer>
+<footer>DIGITE OS DADOS DO VEICULO</footer>
 </body>
 </html>

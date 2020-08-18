@@ -1,0 +1,73 @@
+
+<html>
+<head>
+    <link rel="stylesheet" type=""text/css" href="style.css">
+<title> controle de estacionamento </title>
+        <script type="text/javascript">
+			function validar(){
+				var senha = formuser.senha.value;
+				var rep_senha = formuser.rep_senha.value;
+				
+				if(senha == "" || senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formuser.senha.focus();
+					return false;
+				}
+				
+				if(rep_senha == "" || rep_senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formuser.rep_senha.focus();
+					return false;
+				}
+				
+				if (senha != rep_senha) {
+					alert('Senhas diferentes');
+					formuser.senha.focus();
+					return false;
+				}
+			}
+		</script>
+</head>
+<meta charset ="utf-8">
+<body bgcolor="white" text="black">
+<div class="container">
+<header>
+<img src="logocancela.png">
+</header>
+<h1> CONTROLE DE ESTACIONAMENTO </h1>
+<a href="./validar_senha.html" style="color:#DCDCDC;">cadastrar</a>
+<a href="" style="color:#DCDCDC;">Logar</a>  
+  <div>
+  <div id="div_esquerda">
+  <ul> 
+  <li><a href="vagas.html" style="color:#DCDCDC;">vagas</a><br><br><br>
+     
+  </li>
+ 
+
+  </ul>
+  </div>
+  <div id="div_direita">
+    
+	 <form name="formuser" action="#" method="POST">
+			Nome: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="nome" ><br><br>
+			E-mail:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="email" ><br><br>
+			Senha: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="password" name="senha" ><br><br>
+			Repetir Senha:<input type="password" name="rep_senha" ><br><br>
+			Data: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <input type="datetime" name="data" ><br><br>
+			Telefone: &nbsp  &nbsp &nbsp &nbsp <input type="text" name="telefone" ><br><br>
+			CPF:&nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="cpf" ><br><br>
+			
+			<input type="submit" onclick="return validar()">
+    </form>
+  
+  </div>
+  </div>
+   
+<br><br>
+Seja Bem Vindo,<br>
+
+</div>
+<footer>PREENCHA SEU CADASTRO</footer>
+</body>
+</html>

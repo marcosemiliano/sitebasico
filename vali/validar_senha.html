@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Validar Formulário com JavaScript</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function validar(){
+				var senha = formuser.senha.value;
+				var rep_senha = formuser.rep_senha.value;
+				
+				if(senha == "" || senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formuser.senha.focus();
+					return false;
+				}
+				
+				if(rep_senha == "" || rep_senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formuser.rep_senha.focus();
+					return false;
+				}
+				
+				if (senha != rep_senha) {
+					alert('Senhas diferentes');
+					formuser.senha.focus();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>	
+		<h1>Cadastrar Usuário</h1>
+		<form name="formuser" action="#" method="POST">
+			Nome:<input type="text" name="nome" ><br><br>
+			E-mail:<input type="text" name="email" ><br><br>
+			Senha:<input type="password" name="senha" ><br><br>
+			Repetir Senha:<input type="password" name="rep_senha" ><br><br>
+			
+			<input type="submit" onclick="return validar()">
+		</form>
+	</body>
+</html>
